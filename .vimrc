@@ -16,13 +16,17 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set ic
+
+" Not sure what these do lol
 set wildignore+=.git
 set tags=./tags,tags;$HOME
 set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
-
 augroup filetypedetect
     au! BufRead,BufNewFile *.t, *.sc setfiletype c
 augroup END
+
+" Quit NERDTree when a file is opened
+let g:NERDTreeQuitOnOpen=1
 
 " Remaps 
 let mapleader = ";"
@@ -43,13 +47,14 @@ noremap <leader>r :w <CR> :!clear && gcc % -o %< && ./%< <CR>
 " Plug Ins 
 call plug#begin('~/.vim/plugged')
 
-Plug 'arcticicestudio/nord-vim'
-Plug 'mhartington/oceanic-next'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'bfrg/vim-cpp-modern'
-Plug 'tpope/vim-fugitive'
+    Plug 'arcticicestudio/nord-vim'
+    Plug 'mhartington/oceanic-next'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'bfrg/vim-cpp-modern'
+    Plug 'tpope/vim-fugitive'
+    Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -57,7 +62,7 @@ call plug#end()
 colorscheme nord
 set background=dark
 
-" Airline Configuration 
+" Status line look - Airline Configuration 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
