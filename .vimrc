@@ -41,8 +41,8 @@ nnoremap <TAB> :bn<CR>
 noremap <leader>w :w<CR>
 noremap <SPACE> :
 " shortcut to compile and run C programs
-noremap <leader>c :w <CR> :!clear && gcc % -o %< <CR>
-noremap <leader>r :w <CR> :!clear && gcc % -o %< && ./%< <CR>
+noremap <leader>c :w <CR> :!clear && gcc % -o %< && ./%< <CR>
+noremap <leader>p :w <CR> :!clear && python3 % <CR>
 
 " Plug Ins 
 call plug#begin('~/.vim/plugged')
