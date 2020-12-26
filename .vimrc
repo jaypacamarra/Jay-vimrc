@@ -1,13 +1,17 @@
 filetype plugin on
 syntax enable
 
+set laststatus=2
+set autochdir
 set noerrorbells
 set belloff=all
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
+set autoindent
 set nu
+set relativenumber
 set nowrap
 set smartcase
 set noswapfile
@@ -15,7 +19,14 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set wrapscan
 set ic
+set nocp
+set wrap
+set scrolloff=1
+set sidescrolloff=5
+set linebreak
+set history=1000
 
 " Not sure what these do lol
 set wildignore+=.git
@@ -33,6 +44,9 @@ let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 let g:cpp_posix_standard = 1
+
+" New commands
+command! RefreshConfig source $MYVIMRC
 
 " Remaps 
 let mapleader = ";"
@@ -54,6 +68,7 @@ noremap <leader>B <C-o
 noremap <SPACE> :
 " shortcut to compile and run C programs
 noremap <leader>c :w <CR> :!clear && gcc % -o %< && ./%< <CR>
+noremap <leader>l :w <CR> :!clear && g++ % -o %< && ./%< <CR>
 noremap <leader>p :w <CR> :!clear && python3 % <CR>
 
 " Plug Ins 
