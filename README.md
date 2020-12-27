@@ -8,3 +8,6 @@ Jay's vimrc file for Vim
   
 # Change default terminal
 sudo update-alternatives --config x-terminal-emulator
+
+# Install Vim Plug 
+https://github.com/junegunn/vim-plug
