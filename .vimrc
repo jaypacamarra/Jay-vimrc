@@ -122,7 +122,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdtree'
     
     " Helps to auto update tags
-    Plug 'ludovicchabant/vim-gutentags'
+    Plug 'szw/vim-tags'
 
     " C++ enhanced syntax highlighting 
     Plug 'octol/vim-cpp-enhanced-highlight'     
