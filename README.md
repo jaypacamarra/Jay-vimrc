@@ -13,7 +13,7 @@ sudo update-alternatives --config x-terminal-emulator
 https://github.com/junegunn/vim-plug
 
 # Linux Environment Themes
-Applications: Nordic-darker <br>
-Shell: Nordic-darker <br>
-Terminal: See Background folder <br>
-Desktop wallpaper: See Background folder <br>
+Applications:       Nordic-darker <br>
+Shell:              Nordic-darker <br>
+Terminal:           See Background folder <br>
+Desktop wallpaper:  See Background folder <br>
