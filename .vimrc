@@ -10,33 +10,26 @@ set shiftwidth=4                " shifting only 4 units instead of the default 8
 set expandtab                   " entering a real tab use Ctrl-V<Tab>
 set smartindent                 " Smartly indents
 set autoindent                  " good to turn on
-set nu                          " Actiavte line number
+set nu                          " Activate line number
 set relativenumber              " Relative numbering
 set nowrap                      " Display linesa as just one line (you have to scroll horizontally)
-set smartcase                   " Works well for searches          
 set noswapfile                  " Don't create swap files
 set nobackup                    " Don't create backup file
 set undodir=~/.vim/undodir      " Set undodirectory
 set undofile                    " File that saves history and undo changes
 set incsearch                   " Incremental searching
 set wrapscan                    " search wraps
-set ic                          " Ignores case when searhcing
+set ic                          " Ignores case when searching
 set nocp                        " sets no compatibility mode (LONG LING VIM)
 set wrap                        " wrap lines to fit into window
 set scrolloff=5                 " 5 lines at least below or above cursor
 set sidescrolloff=1             " scrolling lines text wont get confusing anymore
 set linebreak                   " When wrapingto window, don't split across two lines
+let g:NERDTreeQuitOnOpen=1      " Quit NERDTree when a file is opened
 
-" Not sure what these do lol
-set wildignore+=.git            
-set tags=./tags,tags;$HOME
-set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
-augroup filetypedetect
-    au! BufRead,BufNewFile *.t, *.sc setfiletype c
-augroup END
-
-" Quit NERDTree when a file is opened
-let g:NERDTreeQuitOnOpen=1
+" ************************************************************************
+"                    Auto commands! 
+" ************************************************************************
 
 
 " ************************************************************************
@@ -45,9 +38,10 @@ let g:NERDTreeQuitOnOpen=1
 
 " New commands
 command! RefreshConfig source $MYVIMRC
+command! Editvim :e ~/.vimrc
 
-" Set leader keys to comma 
-let mapleader = ";"             
+" Set leader keys to space 
+let mapleader = " "             
 
 " Map escape to kj 
 inoremap kj <Esc>
@@ -64,7 +58,16 @@ nnoremap <F3> :e $MYVIMRC<CR>
 nnoremap <TAB> :bn<CR>
 
 " leader + f key to search files with fzf
-nnoremap <leader>f :Files<CR>
+nnoremap <leader>f :FZF ../..<CR>
+
+" leader + r key to reload vimrc
+nnoremap <leader>r :source % <CR>
+
+" leader + t key to open a terminal
+nnoremap <leader>t :ter <CR>
+
+" leader + R key to reload file
+nnoremap <leader>R :e <CR>
 
 " leader + w to save file
 noremap <leader>w :w<CR>
@@ -83,9 +86,6 @@ noremap <leader>b <C-t>
 
 " leader + B to go back with default VIM jump back from jump history command
 noremap <leader>B <C-o>
-
-" Remap spacebar to enter :
-noremap <SPACE> :
 
 " shortcut to compile and run C programs
 noremap <leader>c :w <CR> :!clear && gcc % -o %< && ./%< <CR>
