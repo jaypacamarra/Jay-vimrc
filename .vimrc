@@ -1,6 +1,14 @@
-filetype plugin on
-syntax enable                   " Enable syntax highlighting
+"   < Jay's vimrc  >
+"    -------------
+"         \   ^__^
+"          \  (oo)\_______
+"             (__)\       )\/\
+"                 ||----w |
+"                 ||     ||
+"
+"                                                          
 
+syntax enable                   " Enable syntax highlighting
 set laststatus=2                " Always display the status line
 set autochdir                   " automatically changes directory to active one
 set noerrorbells                " Turns bell sounds off
@@ -64,7 +72,7 @@ nnoremap <leader>f :FZF ../..<CR>
 nnoremap <leader>r :source % <CR>
 
 " leader + t key to open a terminal
-nnoremap <leader>t :ter <CR>
+nnoremap <leader>t :ter <CR> 
 
 " leader + R key to reload file
 nnoremap <leader>R :e <CR>
@@ -77,6 +85,9 @@ noremap <leader>q :wq<CR>
 
 " leader + Q to QUIT!
 noremap <leader>Q :q!<CR>
+
+" leader + e to open NERDTree file (e)xplorer
+noremap <leader>e :NERDTree<CR>
 
 " leader + d to jump to defenition if tags available
 noremap <leader>d <C-]>
@@ -126,6 +137,9 @@ call plug#begin('~/.vim/plugged')
 
     " C++ enhanced syntax highlighting 
     Plug 'octol/vim-cpp-enhanced-highlight'     
+
+    " Auto complete 
+    Plug 'vim-scripts/AutoComplPop'
     
 call plug#end()
 
