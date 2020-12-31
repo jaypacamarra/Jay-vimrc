@@ -17,3 +17,9 @@ Applications:       Nordic-darker <br>
 Shell:              Nordic-darker <br>
 Terminal:           See Background folder <br>
 Desktop wallpaper:  See Background folder <br>
+
+# Swapping Escape and capslock
+1. Install dconf editor <br>
+2. navigate to org >> gnome >> desktop >> input-sources <br>
+3. setxkbmap -option 'caps:swapescape' <br>
+
