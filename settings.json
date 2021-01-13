@@ -1,0 +1,66 @@
+{
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "window.zoomLevel": 2,
+    "C_Cpp.updateChannel": "Insiders",
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.showExecutionMessage": false,
+    "code-runner.showRunCommandInEditorContextMenu": false,
+    "code-runner.showRunCommandInExplorerContextMenu": false,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.runInTerminal": true,
+    "debug.internalConsoleOptions": "openOnSessionStart",
+    "code-runner.clearPreviousOutput": true,
+    "explorer.confirmDelete": false,
+    "arduino.additionalUrls": [
+        "http://arduino.esp8266.com/stable/package_esp8266com_index.json"
+    ],
+    "arduino.ignoreBoards": [
+        "SparkFun ESP8266 Thing Dev"
+    ],
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+	
+    "vim.easymotion": true,
+	"vim.smartindent": true,
+	"vim.autoindent": true,
+	"vim.relativenumber": true,
+    "vim.incsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["k", "j"],
+            "after": ["<Esc>","<right>"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["k", "j"],
+            "after": ["<Esc>","<right>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>","w"],
+            "commands": [":w"]
+        },
+		{
+            "before": ["<leader>","q"],
+            "commands": [":wq"]		
+		},
+		{
+            "before": ["<leader>","Q"],
+            "commands": [":q!"]		
+		}
+		
+    ],
+    "vim.leader": "<space>",
+    "terminal.explorerKind": "external",
+    "workbench.iconTheme": null,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": true,
+    "breadcrumbs.enabled": true,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "workbench.activityBar.visible": true
+
+	
+}
